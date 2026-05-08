@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Contatti — voltArt. Scrivici o chiamaci per richiedere un preventivo gratuito per il tuo impianto elettrico." />
+  <title>Contatti — voltArt</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+
+
+  <!-- NAVBAR PARTIAL -->
+  <div id="navbar-placeholder"></div>
+
+  <main id="page-content">
+
+  <!-- ===== PAGE HERO ===== -->
+  <div class="page-hero">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="index.html">Home</a>
+        <span>Contatti</span>
+      </div>
+      <h1>Contattaci</h1>
+      <p>Siamo a tua disposizione per preventivi gratuiti, sopralluoghi e qualsiasi informazione.</p>
+    </div>
+  </div>
+
+  <!-- ===== FORM + INFO ===== -->
+  <section class="contatti-section">
+    <div class="container">
+      <div class="contatti-grid">
+
+        <!-- FORM -->
+        <div class="contact-form-wrapper fade-in">
+          <h2>Inviaci un messaggio</h2>
+          <p>Compila il modulo e ti risponderemo entro 24 ore lavorative. I campi contrassegnati con * sono obbligatori.</p>
+
+          <!--
+            ============================================================
+            FORMSPREE: sostituisci YOUR_FORM_ID con il tuo ID Formspree.
+            Registrati gratis su https://formspree.io e crea un nuovo form.
+            Esempio: action="https://formspree.io/f/xpzgdvnb"
+            ============================================================
+          -->
+          <form
+            id="contact-form"
+            action="https://formspree.io/f/YOUR_FORM_ID"
+            method="POST"
+          >
+            <div class="form-row">
+              <div class="form-group">
+                <label for="nome">Nome e Cognome *</label>
+                <input
+                  type="text"
+                  id="nome"
+                  name="nome"
+                  placeholder="Mario Rossi"
+                  required
+                  autocomplete="name"
+                />
+              </div>
+              <div class="form-group">
+                <label for="telefono">Telefono</label>
+                <input
+                  type="tel"
+                  id="telefono"
+                  name="telefono"
+                  placeholder="+39 331 436 4004"
+                  autocomplete="tel"
+                />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email *</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="mario.rossi@email.it"
+                required
+                autocomplete="email"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="servizio">Tipo di richiesta</label>
+              <input
+                type="text"
+                id="servizio"
+                name="servizio"
+                placeholder="Es: Nuovo impianto, manutenzione, fotovoltaico..."
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="messaggio">Messaggio *</label>
+              <textarea
+                id="messaggio"
+                name="messaggio"
+                placeholder="Descrivi brevemente il tuo progetto o la tua richiesta..."
+                required
+              ></textarea>
+            </div>
+
+            <!-- honeypot anti-spam -->
+            <input type="text" name="_gotcha" style="display:none;" tabindex="-1" autocomplete="off" />
+            <input type="hidden" name="_subject" value="Nuova richiesta dal sito voltArt" />
+
+            <button type="submit" class="btn btn-primary form-submit">
+              Invia il messaggio ??
+            </button>
+
+            <div class="form-success" id="form-success">
+              ? Messaggio inviato! Ti ricontatteremo al più presto.
+            </div>
+          </form>
+        </div>
+
+        <!-- INFO -->
+        <div class="contact-info fade-in delay-2">
+          <h3>Dove siamo</h3>
+
+          <div class="info-item">
+            <div class="info-icon">??</div>
+            <div class="info-text">
+              <strong>Indirizzo</strong>
+              <span>Via Marzabotto<br>20098 — San Giuliano Milanese (MI)</span>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <div class="info-icon">??</div>
+            <div class="info-text">
+              <strong>Telefono</strong>
+              <span><a href="tel:+393314364004" style="color:var(--secondary);">+39 331 436 4004</a></span>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <div class="info-icon">??</div>
+            <div class="info-text">
+              <strong>Email</strong>
+              <span><a href="mailto:volt.art.srls@gmail.com" style="color:var(--secondary);">volt.art.srls@gmail.com</a></span>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <div class="info-icon">??</div>
+            <div class="info-text">
+              <strong>Orari</strong>
+              <span>Lunedì – Venerdì: 8:00 – 18:00<br>Sabato: 8:00 – 12:00</span>
+            </div>
+          </div>
+
+          <!-- Mappa statica San Giuliano Milanese -->
+          <div class="map-placeholder">
+            <img
+              src="https://maps.googleapis.com/maps/api/staticmap?center=Via+Marzabotto,San+Giuliano+Milanese,MI,Italy&zoom=15&size=600x220&markers=color:red%7CVia+Marzabotto,San+Giuliano+Milanese,MI&key=YOUR_API_KEY"
+              alt="Mappa Via Marzabotto, San Giuliano Milanese"
+              style="width:100%;height:100%;object-fit:cover;border-radius:var(--radius);"
+              onerror="this.style.display='none'; this.parentElement.innerHTML='<a href=&quot;https://maps.google.com/?q=Via+Marzabotto,+San+Giuliano+Milanese,+MI&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot; style=&quot;display:flex;flex-direction:column;align-items:center;gap:8px;color:var(--secondary);text-decoration:none;&quot;><span style=&quot;font-size:2.5rem;&quot;>??</span><strong>Via Marzabotto — San Giuliano Milanese</strong><span style=&quot;font-size:0.85rem;color:var(--text-light);&quot;>Apri in Google Maps ?</span></a>';"
+            />
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA CHIAMACI ===== -->
+  <section class="cta-call">
+    <div class="container">
+      <h2>Preferisci chiamare direttamente?</h2>
+      <p>Siamo disponibili dal lunedì al venerdì, 8:00 – 18:00.<br>Risponderemo subito a tutte le tue domande.</p>
+      <a href="tel:+393314364004" class="btn-call">
+        <span class="phone-icon">??</span>
+        Chiamaci Ora — +39 331 436 4004
+      </a>
+    </div>
+  </section>
+
+
+
+  </main>
+
+  <!-- FOOTER PARTIAL -->
+  <div id="footer-placeholder"></div>
+
+  <script src="js/partials.js"></script>
+  <script src="js/router.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    // Feedback visivo post-invio form Formspree (redirect opzionale)
+    const form = document.getElementById('contact-form');
+    const success = document.getElementById('form-success');
+    if (form) {
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const data = new FormData(form);
+        try {
+          const res = await fetch(form.action, {
+            method: 'POST',
+            body: data,
+            headers: { 'Accept': 'application/json' }
+          });
+          if (res.ok) {
+            form.reset();
+            success.style.display = 'block';
+            success.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+          } else {
+            alert('Errore nell\'invio. Riprova o contattaci telefonicamente.');
+          }
+        } catch {
+          alert('Errore di rete. Riprova o contattaci telefonicamente.');
+        }
+      });
+    }
+  </script>
+</body>
+</html>
